@@ -11,7 +11,7 @@
 	<groupId>steve.spring</groupId>
 	<artifactId>springbootlearn</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>springbootlearn</name>
+	<name>springBootLearn</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>

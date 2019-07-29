@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>hello world</h1>
+
+<h2 th:text="'userName: ' + ${userName}"></h2>
+<h2 th:text="'password: ' + ${password}"></h2>
+
+<img th:src="@{/img/qinshimingyue.jpeg}">
+
+<table>
+    <tr>
+        <th colspan="2">List forEach Test</th>
+    </tr>
+    <tbody >
+        <tr th:each="str: ${ls}">
+            <td>字符串</td>
+            <td th:text="${str}"></td>
+        </tr>
+    </tbody>
+</table>
+<p th:loop=""></p>
+
+
+</body>
+
+
+</html>

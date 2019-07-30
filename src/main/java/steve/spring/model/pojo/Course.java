@@ -1,7 +1,10 @@
 package steve.spring.model.pojo;
 
+import java.io.Serializable;
+
 //课程表
-public class Course {
+
+public class Course implements Serializable {
 	
 	private Integer courseId;//课程id
 	private String  courseName;//课程名

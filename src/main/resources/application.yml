@@ -3,7 +3,7 @@ spring:
     name: springBoot
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306
+    url: jdbc:mysql://192.168.6.198:3306/mooc_project?serverTimezone=UTC
     username: root
     password: root
     tomcat:
@@ -28,3 +28,12 @@ server:
       timeout: 30m
   tomcat:
     uri-encoding: UTF-8
+mybatis:
+  type-aliases-package: steve.spring.model.pojo          # 注意：对应实体类的路径
+  mapper-locations: classpath:mapper/*.xml    #注意：一定要对应mapper映射xml文件的所在路径
+#pagehelper分页配置
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql

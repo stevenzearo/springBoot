@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Socket Test</title>
+    <script type="text/javascript">
+       function webSocketTest() {
+           const ws = new WebSocket("wss://localhost:8080");
+           ws.onopen = function (ev) {
+               alert("Connection opening...");
+               ws.send("hello WebSocket!");
+           };
+           ws.onmessage =function (ev) {
+               console.log( "Received Message: " + evt.data);
+               ws.close();
+           };
+           ws.onclose = function (ev) {
+               console.log("Connection closed.");
+           };
+           ws.onerror = function (ev) {
+               console.log("error!!!");
+           }
+       }
+    </script>
+</head>
+<body>
+<a href="javascript:webSocketTest()">运行 WebSocket</a>
+</body>
+</html>

@@ -23,7 +23,24 @@
         </tr>
     </tbody>
 </table>
-<p th:loop=""></p>
+<table>
+    course info
+    <tr>
+        <th>course name</th>
+        <th>course level</th>
+        <th>course publish date</th>
+        <th>course picture</th>
+
+    </tr>
+    <tbody >
+    <tr th:each="course: ${coursePage.getList()}">
+        <td th:text="${course.getCourseName()}">字符串</td>
+        <td th:text="${course.getCourseLevel()}">字符串</td>
+        <td th:text="${course.getCourseDate()}">字符串</td>
+        <td><img height="60px" width="120px" th:src="@{'course_imgs/' + ${course.getCoursePicture()}}"/></td>
+    </tr>
+    </tbody>
+</table>
 
 
 </body>
